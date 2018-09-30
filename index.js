@@ -34,3 +34,23 @@ const makeAllCaps = words => {
     }
   });
 };
+
+const sortWords = word => {
+  return new Promise((resolve, request) => {
+    if (word.length) {
+      resolve(word.sort());
+    } else {
+      reject();
+    }
+  });
+};
+
+makeAllCaps(allWords)
+  .then(allWords => sortWords(allWords))
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+
+makeAllCaps(notAllWords)
+  .then(notAllWords => sortWords(notAllWords))
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
