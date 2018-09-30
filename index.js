@@ -54,3 +54,13 @@ makeAllCaps(notAllWords)
   .then(notAllWords => sortWords(notAllWords))
   .then(result => console.log(result))
   .catch(error => console.log(error));
+
+// What is .then() used for, and what is .catch() used for?
+// .then() is used and triggered when a successful response (i.e. when a promise resolves successfully) is retrieved from the server; .then() is used to resolve a Promise.
+// .catch() is used to trigger an error when an unsuccessful response is retrieved from the server.
+
+// What are good use cases for Promises?
+// Promises are used to help you manage asynchronous code and because fetch has Promises built in to it, you are able to make your own functions using Promises.
+
+// What other libraries/functions can you find that use Promises?
+// In Node, we will/can use Promises on the backend to ensure that the a response was successfully retrieved from the database. The Axios HTTP client for JavaScript uses Promises as well.
